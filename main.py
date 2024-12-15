@@ -93,7 +93,7 @@ def start(region):
         print(f"  Round {i + 1} Score: {scores[i]}/{totals[i]}\n")
 
 
-# region = input("Welcome! begin by selecting a region from the following:\n  countries, asia, europe (eu), africa (af), north america (na), south america (sa), oceania (au), middle east (me), or balkan. \n Region Selected: ")
+region = input("Welcome! begin by selecting a region from the following:\n  countries, asia, europe (eu), africa (af), north america (na), south america (sa), oceania (au), middle east (me), or balkan. \n Region Selected: ")
 
 regions = [countries, asia, eu, af, na, sa, au, me, balkan]
 
@@ -108,15 +108,13 @@ names = []
 for name in regions:
     names.append(variable_name(name))
 
-# in_names = region in names
+in_names = region in names
 
-# while not in_names:
-#    region = input(" Enter a valid region: ")
-#    in_names = region in names
+while not in_names:
+    region = input(" Enter a valid region: ")
+    in_names = region in names
 
-# print(f'--- Beginning {region} Capital Quiz ---')
+print(f'--- Beginning {region} Capital Quiz ---')
 
-# index = names.index(region)
-# start(regions[index])
-
-start([germany, lithuania, switzerland])
+index = names.index(region)
+start(regions[index])
