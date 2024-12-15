@@ -90,7 +90,9 @@ def start(region):
 
     print(f"\n ----- Quiz Completed in {len(totals)} Rounds -----\n")
     for i in range(len(totals)):
-        print(f"  Round {i + 1} Score: {scores[i]}/{totals[i]}\n")
+        score_out = round(scores[i] / totals[i], 4) * 100
+        print(
+            f"  Round {i + 1} Score: {scores[i]}/{totals[i]}, {score_out}%")
 
 
 region = input("Welcome! begin by selecting a region from the following:\n  countries, asia, europe (eu), africa (af), north america (na), south america (sa), oceania (au), middle east (me), or balkan. \n Region Selected: ")
@@ -117,4 +119,5 @@ while not in_names:
 print(f'--- Beginning {region} Capital Quiz ---')
 
 index = names.index(region)
-start(regions[index])
+# start(regions[index])
+start([germany, lithuania, switzerland])
