@@ -44,10 +44,10 @@ def skeleton(gamemode, selection):
             print(f"Current Score: {score}/{increment} ({total})")
         scores.append(score)
 
-        print(f" *** Round {len(totals)} Score: {score}/{total} ***\n")
+        print(f"\n*** Round {len(totals)} Score: {score}/{total} ***\n")
         challenge = next_challenge.copy()
 
-    print(f"----- Quiz Completed in {len(totals)} Rounds -----\n")
+    print(f"\n----- Quiz Completed in {len(totals)} Rounds -----\n")
     for i in range(len(totals)):
         score_out = round(scores[i] / totals[i], 4) * 100
         print(f"  Round {i+1} Score: {scores[i]}/{totals[i]}, {score_out}%")
