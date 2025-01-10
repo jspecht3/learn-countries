@@ -12,7 +12,7 @@ def other(str1, list1):
     for item in list1:
         list2.append(item.lower())
 
-    loc = list2.index(str1)
+    loc = list2.index(str1.lower())
     del list1[loc]
 
     return list1
